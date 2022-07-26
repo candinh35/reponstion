@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bài tập js đầu tiên</title>
+</head>
+<style>
+    /* .wrapped{
+        width: 700px;
+        margin: 0 auto;
+        height: 600px;
+        border: 1px solid;
+    } */
+    .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:400px;
+            height:200px;
+            border: 2px solid green;
+            transition: 1s; 
+        }
+        /*css của khối div*/
+ 
+        .move{
+            transform: translateX(400px);
+                        transition: 2s;
+        }
+        /* .move1{
+            transform: translatey(400px);
+                        transition: 8s;
+        } */
+        /* .move{
+            transform: translateX(400px);
+                        transition: 1s;
+        }
+        .move{
+            transform: translateX(400px);
+                        transition: 1s;
+        } */
+</style>
+<body>
+    <div class="wrapped">
+
+    
+           <div class='card'>
+                 <h2 style="text-align: center; ">
+                     Chạy xa em 
+                 </h2>    
+           </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded",function(){
+                        var khoi = document.querySelectorAll('div');
+                        setTimeout( function(){
+                           khoi[0].classList.toggle('move');},2000);
+                           setTimeout( function(){
+                           khoi[0].classList.toggle('move1');},2000);
+                  },false)
+        </script>
+</body>
+</html>

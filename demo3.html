@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="user_name"  id="email" placeholder="Username(*)"/>
+        <p class="error error-email"></p>
+        <input type="password" name="password"  id="password"  placeholder="Password(*)"/> <br>
+        <p class="error error-password"></p>
+        <button>Login</button>
+    </form>
+    <script>
+        let btn = document.querySelector("button");
+        const email = document.querySelector("#email");
+        const password = document.querySelector("#password");
+        email.onblur = function checkValidEmail() {
+            const txtEmail = email.value;
+           
+            if(txtEmail == ""){
+                document.querySelector('.error-email').innerText="Vui lòng Nhập Mục Này";
+            }else{
+                document.querySelector('.error-email').innerText="";
+            }
+        }
+        password.onblur = function checkValidEmail() {
+            const txtEmail = password.value;
+            if(txtEmail == ""){
+                document.querySelector('.error-password').innerText="Vui lòng Nhập Mục Này";
+            }else{
+                document.querySelector('.error-password').innerText="";
+            }
+        }
+        btn.onclick = checkValidEmail();
+    </script>
+</body>
+</html>
